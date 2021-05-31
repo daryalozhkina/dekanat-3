@@ -7,3 +7,14 @@ class Group(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Student(models.Model):
+    group = models.ForeignKey(Group,
+                                 on_delete=models.CASCADE)
+    name = models.TextField('Имя', default=0)
+
+    class Meta:
+        verbose_name = 'Студент'
+        verbose_name_plural = 'Студенты'
+
