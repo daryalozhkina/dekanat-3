@@ -12,7 +12,7 @@ class Group(models.Model):
 class Student(models.Model):
     group = models.ForeignKey(Group,
                                  on_delete=models.CASCADE)
-    name = models.TextField('Имя', default=0)
+    name = models.TextField(max_length=128)
 
     class Meta:
         verbose_name = 'Студент'
