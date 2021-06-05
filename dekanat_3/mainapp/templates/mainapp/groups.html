@@ -1,0 +1,18 @@
+{% extends 'mainapp/base.html' %}
+{% block content %}
+<h1>Группы</h1>
+<div>
+    <ul>
+        <li>
+            <a href="{% url 'mainapp:create_group' %}">Создать группу</a>
+        </li>
+        {% for item in groups %}
+<!--        <li>-->
+<!--            <a href="{% url 'mainapp:groups' item.pk %}">-->
+                {{ item }}
+<!--            </a>-->
+<!--        </li>-->
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

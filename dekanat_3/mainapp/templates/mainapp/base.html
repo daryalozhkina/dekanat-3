@@ -8,7 +8,10 @@
 <div class="menu">
     <ul>
         <li>
-            <a href="{% url 'mainapp:index' %}">Группы</a>
+            <a href="{% url 'mainapp:index' %}">Главная</a>
+        </li>
+        <li>
+            <a href="{% url 'mainapp:group_list' %}">Группы</a>
         </li>
     </ul>
     {% block content %}
